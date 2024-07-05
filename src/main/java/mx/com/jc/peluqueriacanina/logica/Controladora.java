@@ -1,5 +1,6 @@
 package mx.com.jc.peluqueriacanina.logica;
 
+import java.util.List;
 import mx.com.jc.peluqueriacanina.persistencia.ControladoraPersistencia;
 
 public class Controladora {
@@ -26,6 +27,14 @@ public class Controladora {
         
         controlPersis.guardar(duenio, mascota);
         
+    }
+
+    public List<Mascota> traerMascotas() {
+        return controlPersis.traerMascotas();
+    }
+
+    public void borrarMascota(int num_cliente) {
+        controlPersis.BorrarMascota(num_cliente);
     }
 
 }
